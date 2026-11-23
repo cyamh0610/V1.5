@@ -1,0 +1,20 @@
+.vn { position: relative; min-height: 70vh; border-radius: var(--radius); background: linear-gradient(#cfd8e3, #e9e6df); display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; overflow: hidden; user-select: none; }
+.vn.has-bg { background-size: cover; background-position: center; }
+.vn-skip { position: absolute; top: 10px; right: 10px; z-index: 2; }
+.vn-box { margin: 12px; padding: 14px 16px 10px; min-height: 9em; background: rgba(255,255,255,.93); border: 1px solid var(--border); border-radius: var(--radius); position: relative; }
+.vn-name { position: absolute; top: -14px; left: 14px; padding: 1px 14px; background: var(--accent); color: var(--accent-text); border-radius: 12px; font-weight: 700; }
+.vn-text { margin: 6px 0 0; white-space: pre-wrap; min-height: 4.5em; }
+.vn-hint { text-align: right; font-size: .8rem; color: var(--text-muted); }
+.su-row { display: flex; gap: 10px; align-items: center; padding: 10px; margin-bottom: 8px; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; }
+.su-row input { width: 20px; height: 20px; flex: none; }
+.su-thumb { width: 48px; height: 72px; flex: none; }
+.su-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.adv .btn { display: block; width: 100%; max-width: 360px; margin: 10px 0; }
+.adv-row { display: flex; gap: 14px; align-items: center; margin: 12px 0; }
+.adv-thumb { width: 96px; height: 144px; border-radius: 6px; background: repeating-conic-gradient(#e6e6e3 0 25%, #f6f6f4 0 50%) 0 0 / 12px 12px; flex: none; }
+.adv-side { flex: 1; min-width: 0; }
+.adv-up { color: #b36b00; font-weight: 700; margin: 4px 0; }
+.adv-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+.adv-card { font: inherit; text-align: left; padding: 12px; min-height: 96px; background: var(--panel); color: var(--text); border: 2px solid var(--border); border-radius: var(--radius); cursor: pointer; }
+.adv-card:hover, .adv-card:focus-visible { border-color: var(--accent); }
+.adv .btn.subtle { margin-top: 18px; }

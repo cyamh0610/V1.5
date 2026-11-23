@@ -1,0 +1,60 @@
+[
+  {
+    "id": "skill_test_strike",
+    "name": "【測試】強擊",
+    "desc": "",
+    "type": "attack",
+    "power": 1.6,
+    "cooldown": 2
+  },
+  {
+    "id": "skill_test_double",
+    "name": "【測試】連擊",
+    "desc": "",
+    "type": "attack",
+    "power": 0.8,
+    "hits": 2,
+    "cooldown": 2
+  },
+  {
+    "id": "skill_test_heal",
+    "name": "【測試】回復",
+    "desc": "",
+    "type": "heal",
+    "healPercent": 0.3,
+    "cooldown": 3
+  },
+  {
+    "id": "skill_test_focus",
+    "name": "【測試】集中",
+    "desc": "",
+    "type": "buff",
+    "stat": "atk",
+    "multiplier": 1.5,
+    "turns": 3,
+    "cooldown": 4
+  },
+  {
+    "id": "skill_test_heavy",
+    "name": "【測試】重擊（敵人用）",
+    "desc": "",
+    "type": "attack",
+    "power": 1.5,
+    "cooldown": 2,
+    "enemyOnly": true,
+    "weight": 2
+  },
+  {
+    "id": "skill_test_qte_blast",
+    "name": "【測試】強力一擊（QTE）",
+    "desc": "",
+    "useText": "",
+    "type": "attack",
+    "power": 2.2,
+    "cooldown": 3,
+    "qte": true,
+    "enemyOnly": true,
+    "maxUses": 3,
+    "weight": 1
+  }
+]

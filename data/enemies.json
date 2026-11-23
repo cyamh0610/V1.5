@@ -1,0 +1,45 @@
+[
+  {
+    "id": "enemy_test_a",
+    "name": "【測試】敵人 A",
+    "appearText": "",
+    "image": "assets/enemies/placeholder_a.png",
+    "hp": 60,
+    "atk": 9,
+    "def": 2,
+    "skills": [
+      "skill_test_heavy"
+    ],
+    "skillChance": 0.35,
+    "boss": false
+  },
+  {
+    "id": "enemy_test_b",
+    "name": "【測試】敵人 B",
+    "appearText": "",
+    "image": "assets/enemies/placeholder_a.png",
+    "hp": 80,
+    "atk": 11,
+    "def": 3,
+    "skills": [
+      "skill_test_heavy"
+    ],
+    "skillChance": 0.4,
+    "boss": false
+  },
+  {
+    "id": "enemy_test_boss",
+    "name": "【測試】強敵",
+    "appearText": "",
+    "image": "assets/enemies/placeholder_boss.png",
+    "hp": 220,
+    "atk": 14,
+    "def": 5,
+    "skills": [
+      "skill_test_qte_blast",
+      "skill_test_heavy"
+    ],
+    "skillChance": 0.6,
+    "boss": true
+  }
+]

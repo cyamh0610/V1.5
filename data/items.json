@@ -1,0 +1,72 @@
+[
+  {
+    "id": "item_heal_test",
+    "name": "【測試】恢復道具",
+    "desc": "",
+    "type": "heal",
+    "amount": 40,
+    "reward": true,
+    "weight": 3
+  },
+  {
+    "id": "item_bomb_test",
+    "name": "【測試】攻擊道具",
+    "desc": "",
+    "type": "damage",
+    "amount": 30,
+    "reward": true,
+    "weight": 2
+  },
+  {
+    "id": "item_buff_test",
+    "name": "【測試】防禦強化（3 回合）",
+    "desc": "",
+    "type": "buff",
+    "stat": "def",
+    "multiplier": 1.5,
+    "turns": 3,
+    "reward": true,
+    "weight": 2
+  },
+  {
+    "id": "item_buff_long_test",
+    "name": "【測試】攻擊強化（持續 2 場戰鬥）",
+    "desc": "",
+    "type": "buff",
+    "stat": "atk",
+    "multiplier": 1.3,
+    "battles": 2,
+    "reward": true,
+    "weight": 1
+  },
+  {
+    "id": "item_passive_atk_test",
+    "name": "【測試】持有：攻擊 +2",
+    "desc": "",
+    "type": "passive",
+    "stat": "atk",
+    "bonus": 2,
+    "reward": true,
+    "weight": 1
+  },
+  {
+    "id": "item_passive_def_test",
+    "name": "【測試】持有：防禦 +1",
+    "desc": "",
+    "type": "passive",
+    "stat": "def",
+    "bonus": 1,
+    "reward": true,
+    "weight": 1
+  },
+  {
+    "id": "item_passive_hp_test",
+    "name": "【測試】持有：HP +15",
+    "desc": "",
+    "type": "passive",
+    "stat": "hp",
+    "bonus": 15,
+    "reward": true,
+    "weight": 1
+  }
+]

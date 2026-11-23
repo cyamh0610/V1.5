@@ -1,0 +1,37 @@
+{
+  "maxCharacters": 20,
+  "nameMaxLength": 20,
+  "identityMaxLength": 30,
+  "bioMaxLength": 300,
+  "battle": {
+    "_說明": "以下數值全部是測試用，請自行調整。所有角色的初始數值相同。",
+    "playerBase": {
+      "hp": 100,
+      "atk": 12,
+      "def": 4
+    },
+    "playerGrowthPerLevel": {
+      "hp": 10,
+      "atk": 2,
+      "def": 1
+    },
+    "maxSkills": 4,
+    "defaultSkillCount": 3,
+    "guardDamageMultiplier": 0.5,
+    "damageVariance": 0.1,
+    "background": "",
+    "qte": {
+      "letters": "ASDFJKL",
+      "keyCount": 3,
+      "timeLimitMs": 3000,
+      "easyTimeMultiplier": 2,
+      "successDamageMultiplier": 0.4,
+      "failDamageMultiplier": 1.0
+    },
+    "testInventory": {
+      "item_heal_test": 3,
+      "item_bomb_test": 2,
+      "item_buff_test": 1
+    }
+  }
+}

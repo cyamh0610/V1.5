@@ -1,0 +1,63 @@
+{
+  "_說明": "第 N 層的敵人：Boss 層看 bosses，其餘從 normalEnemies 隨機。數值為測試用，請自行調整。",
+  "totalFloors": 20,
+  "bossEvery": 10,
+  "normalEnemies": [
+    "enemy_test_a",
+    "enemy_test_b"
+  ],
+  "bosses": {
+    "10": {
+      "enemy": "enemy_test_boss",
+      "statMultiplier": 0.8
+    },
+    "20": {
+      "enemy": "enemy_test_boss",
+      "statMultiplier": 1.0
+    }
+  },
+  "overrides": [],
+  "scaling": {
+    "hpPerFloor": 0.08,
+    "atkPerFloor": 0.04,
+    "defPerFloor": 0.04
+  },
+  "leveling": {
+    "expToNext": {
+      "base": 30,
+      "perLevel": 20
+    },
+    "expPerWin": {
+      "base": 15,
+      "perFloor": 3
+    },
+    "maxLevel": 30
+  },
+  "restHealPercent": 0.3,
+  "rewardCount": 3,
+  "modes": {
+    "standard": {
+      "name": "標準模式",
+      "desc": "倒下後，這次冒險的等級與道具會歸零，從第 1 層重新開始。每場戰鬥結束後只會回復一部分 HP。角色外觀、解鎖內容與冒險紀錄都會保留。",
+      "restHealPercent": 0.3,
+      "deathText": "這次冒險的等級與道具都已清空，下次會從第 1 層、1 級重新開始。"
+    },
+    "casual": {
+      "name": "輕鬆模式",
+      "desc": "倒下後，等級會保留，這次冒險拿到的道具會清空，從第 1 層重新開始。每場戰鬥結束後 HP 會完全回復。解鎖內容也會保留。",
+      "restHealPercent": 1,
+      "deathText": "等級會保留，下次會以現在的等級從第 1 層重新開始。這次冒險拿到的道具已清空。"
+    }
+  },
+  "achievements": [
+    {
+      "id": "ach_boss10_first",
+      "name": "【測試】首次擊敗第 10 層強敵",
+      "desc": "",
+      "type": "defeatBoss",
+      "floor": 10
+    }
+  ],
+  "clearTitle": "",
+  "clearBody": []
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>載入中…</title>
+<link rel="stylesheet" href="css/theme.css?v=5">
+<link rel="stylesheet" href="css/base.css?v=5">
+<link rel="stylesheet" href="css/editor.css?v=5">
+<link rel="stylesheet" href="css/battle.css?v=5">
+<link rel="stylesheet" href="css/adventure.css?v=5">
+</head>
+<body>
+<p id="boot-loading" style="padding:16px">載入中…（如果一直停在這裡，表示遊戲檔案沒有載入成功）</p>
+<div id="app">
+  <section class="page" data-page="menu" hidden>
+    <h1 id="game-title"></h1>
+    <p id="game-subtitle" class="muted"></p>
+    <nav class="menu">
+      <button class="btn primary" id="btn-start">開始冒險</button>
+      <button class="btn" data-go="characters">角色管理</button>
+      <button class="btn" data-go="help">遊戲說明</button>
+      <button class="btn" data-go="settings">設定</button>
+      <button class="btn subtle" data-go="credits">素材使用與致謝</button>
+    </nav>
+    <div id="backup-reminder-menu" class="reminder" hidden></div>
+    <p class="muted small version">版本 5</p>
+  </section>
+
+  <section class="page" data-page="dialog" hidden>
+    <div id="dialog-root"></div>
+  </section>
+
+  <section class="page" data-page="setup" hidden>
+    <div id="setup-root"></div>
+  </section>
+
+  <section class="page" data-page="adventure" hidden>
+    <div id="adventure-root"></div>
+  </section>
+
+  <section class="page" data-page="characters" hidden>
+    <h2>角色管理</h2>
+    <div id="backup-reminder-chars" class="reminder" hidden></div>
+    <div id="char-notice" class="notice" role="status" hidden></div>
+    <div id="characters-root"></div>
+    <button class="btn" data-go="menu">返回主選單</button>
+  </section>
+
+  <section class="page" data-page="editor" hidden>
+    <div id="editor-root"></div>
+  </section>
+
+  <section class="page" data-page="status" hidden>
+    <div id="status-root"></div>
+    <button class="btn" id="status-back" data-go="characters">返回角色管理</button>
+  </section>
+
+  <section class="page" data-page="help" hidden>
+    <h2>遊戲說明</h2>
+    <div id="help-body" class="prose"></div>
+    <button class="btn" data-go="menu">返回主選單</button>
+  </section>
+
+  <section class="page" data-page="settings" hidden>
+    <h2>設定</h2>
+    <div id="settings-root"></div>
+    <button class="btn" data-go="menu">返回主選單</button>
+  </section>
+
+  <section class="page" data-page="battle" hidden>
+    <div id="battle-root"></div>
+  </section>
+
+  <section class="page" data-page="credits" hidden>
+    <h2>素材使用與致謝</h2>
+    <p class="muted">感謝所有素材創作者。以下列出本遊戲使用的第三方素材與授權方式。</p>
+    <div id="credits-list"></div>
+    <button class="btn" data-go="menu">返回主選單</button>
+  </section>
+</div>
+
+<div id="boot-warning" hidden>
+  <div class="error-card">
+    <h3>遊戲無法啟動</h3>
+    <p>遊戲檔案沒有成功載入。請依序檢查：</p>
+    <p>① 如果是雙擊 index.html 開啟：請改用 VS Code 的 Live Server（見 GUIDE.md）。<br>
+    ② 如果是在網址上開啟：先按 Ctrl+F5（手機請清除瀏覽器快取）強制重新整理，舊版快取是最常見的原因。<br>
+    ③ 開啟 tools/check.html，看哪個檔案顯示缺少，補上傳。GitHub 的檔名大小寫必須完全一致。</p>
+    <p id="boot-missing" class="small"></p>
+    <p id="boot-detail" class="small"></p>
+  </div>
+</div>
+<div id="error-box" hidden role="alert">
+  <div class="error-card">
+    <h3 id="error-title"></h3>
+    <p id="error-file"></p>
+    <p id="error-msg"></p>
+    <button class="btn" id="error-close">關閉</button>
+  </div>
+</div>
+<script src="js/boot.js?v=5"></script>
+<script type="module" src="js/main.js?v=5" onerror="showBoot()"></script>
+</body>
+</html>

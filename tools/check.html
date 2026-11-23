@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>資料檢查工具</title>
+<link rel="stylesheet" href="../css/theme.css"><link rel="stylesheet" href="../css/base.css">
+<style>.ok{color:#2f7d3b}.bad{color:var(--danger)}li{margin:6px 0;overflow-wrap:anywhere}</style></head>
+<body><div id="app"><h2>資料檢查工具</h2>
+<p class="muted">檢查 data/ 資料夾內的 JSON 是否正確。修改完資料後，重新整理此頁即可。</p>
+<ul id="out"></ul></div>
+<script src="../js/boot.js?v=5"></script>
+<script type="module">
+import { DATA_FILES, loadJSON, DataError } from '../js/core/dataLoader.js?v=5';
+const out = document.getElementById('out');
+const add = (cls, txt) => { const li = document.createElement('li'); li.className = cls; li.textContent = txt; out.append(li); };
+const REQUIRED = window.__FILES || [];
+const miss = [];
+await Promise.all(REQUIRED.map(async f => { try { const r = await fetch('../' + f, { cache: 'no-cache' }); if (!r.ok) miss.push(f); } catch (e) { miss.push(f); } }));
+if (miss.length) miss.forEach(f => add('bad', `✗ 程式檔缺少或讀不到：${f}（請確認已上傳，且大小寫相同）`));
+else add('ok', `✓ ${REQUIRED.length} 個程式檔都找得到`);
+const all = {};
+for (const f of DATA_FILES) { try { all[f.key] = await loadJSON('../' + f.path); } catch (e) {} }
+for (const f of DATA_FILES) {
+  try {
+    const data = await loadJSON('../' + f.path);
+    const probs = f.validate(data, all);
+    if (probs.length) probs.forEach(p => add('bad', `✗ ${f.path}：${p}`));
+    else {
+      add('ok', `✓ ${f.path} 正常`);
+      if (f.key === 'parts') {
+        const files = data.parts.flatMap(x => [x.file, x.maskFile].filter(Boolean));
+        const res = await Promise.all(files.map(src => new Promise(r => { const i = new Image(); i.onload = () => r([src, true]); i.onerror = () => r([src, false]); i.src = '../' + src; })));
+        const bad = res.filter(r => !r[1]);
+        if (bad.length) bad.forEach(b => add('bad', `✗ 找不到圖片：${b[0]}（請確認檔名與資料夾）`));
+        else add('ok', `✓ 所有素材圖片（${files.length} 張）都找得到`);
+      }
+    }
+  } catch (e) { add('bad', `✗ ${f.path}：${e instanceof DataError ? e.message : e}`); }
+}
+if (all.enemies) {
+  const imgs = all.enemies.map(e => e.image).filter(Boolean);
+  const res = await Promise.all(imgs.map(src => new Promise(r => { const i = new Image(); i.onload = () => r([src, true]); i.onerror = () => r([src, false]); i.src = '../' + src; })));
+  res.filter(r => !r[1]).forEach(b => add('bad', `✗ 找不到敵人圖片：${b[0]}`));
+  if (res.every(r => r[1])) add('ok', `✓ 敵人圖片（${imgs.length} 張）都找得到`);
+}
+</script></body></html>

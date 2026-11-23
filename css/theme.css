@@ -1,0 +1,14 @@
+/* ===== 換皮變數：之後要改整體風格，只需修改這個檔案 ===== */
+:root {
+  --bg: #f2f2f0;
+  --panel: #ffffff;
+  --text: #2b2b2b;
+  --text-muted: #6b6b6b;
+  --border: #cfcfcb;
+  --accent: #4a6fa5;
+  --accent-text: #ffffff;
+  --danger: #b3412f;
+  --radius: 8px;
+  --font: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-size: 16px;
+}

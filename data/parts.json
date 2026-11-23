@@ -1,0 +1,260 @@
+{
+  "canvas": {
+    "width": 512,
+    "height": 768
+  },
+  "categories": [
+    {
+      "id": "wings",
+      "name": "翅膀",
+      "z": 5,
+      "multi": false,
+      "optional": true,
+      "defaultOn": false
+    },
+    {
+      "id": "tail",
+      "name": "尾巴",
+      "z": 8,
+      "multi": false,
+      "optional": true,
+      "defaultOn": false,
+      "colorGroup": "skin"
+    },
+    {
+      "id": "hair_back",
+      "name": "後髮",
+      "z": 10,
+      "multi": false,
+      "optional": true,
+      "defaultOn": true,
+      "colorGroup": "hair"
+    },
+    {
+      "id": "body",
+      "name": "身體",
+      "z": 20,
+      "multi": false,
+      "optional": false,
+      "defaultOn": true,
+      "colorGroup": "skin",
+      "randomColors": [
+        "#f6d9c0",
+        "#f1c9a5",
+        "#e0ac82",
+        "#c68b5f",
+        "#8d5a3b",
+        "#fde7d3"
+      ],
+      "transform": false
+    },
+    {
+      "id": "ears",
+      "name": "耳朵",
+      "z": 30,
+      "multi": true,
+      "optional": true,
+      "defaultOn": false,
+      "colorGroup": "skin"
+    },
+    {
+      "id": "outfit",
+      "name": "服裝",
+      "z": 40,
+      "multi": false,
+      "optional": true,
+      "defaultOn": true
+    },
+    {
+      "id": "mouth",
+      "name": "嘴巴",
+      "z": 50,
+      "multi": false,
+      "optional": true,
+      "defaultOn": true
+    },
+    {
+      "id": "eyes",
+      "name": "眼睛",
+      "z": 52,
+      "multi": false,
+      "optional": true,
+      "defaultOn": true
+    },
+    {
+      "id": "hair_front",
+      "name": "前髮",
+      "z": 60,
+      "multi": false,
+      "optional": true,
+      "defaultOn": true,
+      "colorGroup": "hair"
+    },
+    {
+      "id": "horns",
+      "name": "角",
+      "z": 65,
+      "multi": true,
+      "optional": true,
+      "defaultOn": false
+    },
+    {
+      "id": "head_acc",
+      "name": "頭部裝飾",
+      "z": 70,
+      "multi": true,
+      "optional": true,
+      "defaultOn": false
+    }
+  ],
+  "parts": [
+    {
+      "id": "body_placeholder_body",
+      "category": "body",
+      "name": "【佔位】身體",
+      "file": "assets/characters/body/placeholder_body.png",
+      "mode": "tint",
+      "defaultColor": "#f1c9a5"
+    },
+    {
+      "id": "hair_back_placeholder_a",
+      "category": "hair_back",
+      "name": "【佔位】長後髮",
+      "file": "assets/characters/hair_back/placeholder_a.png",
+      "mode": "tint",
+      "defaultColor": "#8b5a2b"
+    },
+    {
+      "id": "hair_back_placeholder_b",
+      "category": "hair_back",
+      "name": "【佔位】短後髮",
+      "file": "assets/characters/hair_back/placeholder_b.png",
+      "mode": "tint",
+      "defaultColor": "#8b5a2b"
+    },
+    {
+      "id": "hair_front_placeholder_a",
+      "category": "hair_front",
+      "name": "【佔位】瀏海",
+      "file": "assets/characters/hair_front/placeholder_a.png",
+      "mode": "tint",
+      "defaultColor": "#8b5a2b"
+    },
+    {
+      "id": "hair_front_placeholder_b",
+      "category": "hair_front",
+      "name": "【佔位】側分前髮",
+      "file": "assets/characters/hair_front/placeholder_b.png",
+      "mode": "tint",
+      "defaultColor": "#8b5a2b"
+    },
+    {
+      "id": "eyes_placeholder_a",
+      "category": "eyes",
+      "name": "【佔位】圓眼",
+      "file": "assets/characters/eyes/placeholder_a.png",
+      "mode": "mask",
+      "defaultColor": "#3a6ea5",
+      "maskFile": "assets/characters/eyes/placeholder_a_mask.png",
+      "splitX": 320,
+      "splitLabels": [
+        "左眼（畫面左側）",
+        "右眼（畫面右側）"
+      ]
+    },
+    {
+      "id": "eyes_placeholder_b",
+      "category": "eyes",
+      "name": "【佔位】細眼",
+      "file": "assets/characters/eyes/placeholder_b.png",
+      "mode": "mask",
+      "defaultColor": "#3a8a5a",
+      "maskFile": "assets/characters/eyes/placeholder_b_mask.png",
+      "splitX": 320,
+      "splitLabels": [
+        "左眼（畫面左側）",
+        "右眼（畫面右側）"
+      ]
+    },
+    {
+      "id": "mouth_placeholder_a",
+      "category": "mouth",
+      "name": "【佔位】微笑",
+      "file": "assets/characters/mouth/placeholder_a.png",
+      "mode": "none",
+      "defaultColor": "#ffffff"
+    },
+    {
+      "id": "mouth_placeholder_b",
+      "category": "mouth",
+      "name": "【佔位】張嘴",
+      "file": "assets/characters/mouth/placeholder_b.png",
+      "mode": "none",
+      "defaultColor": "#ffffff"
+    },
+    {
+      "id": "outfit_placeholder_a",
+      "category": "outfit",
+      "name": "【佔位】上衣",
+      "file": "assets/characters/outfit/placeholder_a.png",
+      "mode": "tint",
+      "defaultColor": "#c0504d"
+    },
+    {
+      "id": "outfit_placeholder_b",
+      "category": "outfit",
+      "name": "【佔位】連身裙",
+      "file": "assets/characters/outfit/placeholder_b.png",
+      "mode": "tint",
+      "defaultColor": "#4d7ac0"
+    },
+    {
+      "id": "ears_placeholder_cat",
+      "category": "ears",
+      "name": "【佔位】貓耳",
+      "file": "assets/characters/ears/placeholder_cat.png",
+      "mode": "tint",
+      "defaultColor": "#d9a066"
+    },
+    {
+      "id": "ears_placeholder_elf",
+      "category": "ears",
+      "name": "【佔位】尖耳",
+      "file": "assets/characters/ears/placeholder_elf.png",
+      "mode": "tint",
+      "defaultColor": "#f1c9a5"
+    },
+    {
+      "id": "horns_placeholder_a",
+      "category": "horns",
+      "name": "【佔位】小角",
+      "file": "assets/characters/horns/placeholder_a.png",
+      "mode": "tint",
+      "defaultColor": "#e8e0d0"
+    },
+    {
+      "id": "tail_placeholder_a",
+      "category": "tail",
+      "name": "【佔位】尾巴",
+      "file": "assets/characters/tail/placeholder_a.png",
+      "mode": "tint",
+      "defaultColor": "#d9a066"
+    },
+    {
+      "id": "wings_placeholder_a",
+      "category": "wings",
+      "name": "【佔位】翅膀",
+      "file": "assets/characters/wings/placeholder_a.png",
+      "mode": "tint",
+      "defaultColor": "#dfe8ff"
+    },
+    {
+      "id": "head_acc_placeholder_ribbon",
+      "category": "head_acc",
+      "name": "【佔位】蝴蝶結",
+      "file": "assets/characters/head_acc/placeholder_ribbon.png",
+      "mode": "tint",
+      "defaultColor": "#e86a92"
+    }
+  ]
+}
